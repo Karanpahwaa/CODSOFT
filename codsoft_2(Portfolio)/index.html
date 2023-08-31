@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="icon" href="images/frame-8150246_640.webp">
+  </head>
+
+
+  <style>
+    body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0b1b29;
+      color: whitesmoke;
+    }
+
+    nav {
+      background-color: #0b1b29;
+      font-size: 24px;
+      color: whitesmoke;
+    }
+
+    nav ul{
+      list-style: none;
+      display: flex;
+      justify-content: right;
+      margin-right: 40px;
+
+    }
+
+    ul li{
+      margin: 10px;
+    }
+
+    nav a{
+      text-decoration: none;
+      color: whitesmoke;
+    }
+
+    nav a:hover{
+      color: aqua;
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .intro-content {
+      max-width: 80%;
+      display: flex;
+      height: 550px;
+    }
+    .written {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: whitesmoke;
+      animation: textMove 2s ease-in;
+      margin: 20px;
+      margin-left: 240px;
+      /* float: right; */
+    }
+
+    .intro-content img {
+      max-width: 100%;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 15px 15px rgba(0, 255, 255, 0.7);
+      height: 500px;
+      /* width: 600px; */
+    }
+
+
+    @keyframes textMove {
+      0%{
+        transform: translateX(50%) translateY(0);
+      }
+
+      100%{
+        transform: translateX(0%) translateY(0%);
+      }
+      
+    }
+
+
+    .written p {
+      margin: 10px 50px;
+      font-size: 32px;
+    }
+
+    .written h3 {
+      font-size: 40px;
+    }
+
+    .outer-circle {
+      padding: 5px;
+      border-radius: 50%;
+      max-width: 45%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 50px;
+    }
+
+    .education,
+    .skills, .projects {
+      margin-left: 3.5%;
+      max-width: 90%;
+      text-align: center;
+      padding: 20px;
+      border: 5px groove whitesmoke;
+      border-radius: 15px;
+      display: none;
+    }
+
+    .education h1,
+    .skills h1 , .projects h1{
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: aqua;
+    }
+
+    .education-item {
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .education-item h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .education-item p {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .heading-Edu {
+      margin-left: 100px;
+    }
+
+    .content-Edu {
+      margin-right: 100px;
+    }
+
+    .buttons {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .buttons button {
+      background-color: whitesmoke;
+      color: #0b1b29;
+      border-radius: 10px;
+      width: 250px;
+      height: 70px;
+      margin: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      border: 5px groove aqua;
+    }
+
+    .buttons button:hover {
+      background-color: rgba(0, 255, 255, 0.8);
+    }
+
+    .bar {
+      width: 40%;
+      border: 1px solid whitesmoke;
+      height: 5px;
+      border-radius: 2px;
+    }
+    .percentage {
+      width: 90%;
+      height: 100%;
+      background-color: aqua;
+    }
+
+    .label {
+      position: relative;
+      bottom:-3px;
+      left: 90%; 
+      transform: translateX(-50%);
+      background-color: white; 
+      color:#0b1b29;
+      border-radius: 15px;
+      padding: 2px 2px;
+      width: 30px;
+      height: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .info {
+      justify-content: left;
+      text-align: left;
+      margin-left: 100px;
+    }
+
+    .info p {
+      margin: 0px;
+      font-size: 20px;
+    }
+
+    .project-item{
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .project-desc{
+        padding: 40px;
+        margin: 20px;
+        width: 45%;
+        font-size: 24px;
+    }
+
+    .project-photo{
+      width: 54%;
+    }
+
+    .project-photo img{
+      max-width: 70%;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 15px 15px rgba(0, 255, 255, 0.7);
+        border-radius: 20px;
+    }
+
+    .contact{
+      margin-left: 3.5%;
+      max-width: 90%;
+      text-align: center;
+      padding: 20px;
+      border: 5px groove whitesmoke;
+      border-radius: 15px;
+    }
+
+    .contact img{
+      width: 40px;
+      height: 40px;
+      border:none;
+      border-radius: none;
+      box-shadow: none;
+      margin: 5px;
+    }
+
+    .contact-sec{
+      display: flex;
+      padding: 40px;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .connect,.links{
+      width: 49%;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+
+    .connect input{
+      width: 70%;
+      border-radius: 10px;
+      border: 4px groove rgb(65, 61, 61);
+      margin: 6px;
+      padding: 5px;
+      height: 30px;
+      background-color: grey;
+    }
+
+    input::placeholder{
+      padding: 2px;
+      text-align: center;
+      color: #0b1b29;
+    }
+
+    .contact button{
+      background-color: whitesmoke;
+      color: #0b1b29;
+      border-radius: 10px;
+      width: 130px;
+      height: 34px;
+      margin: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      border: 5px groove aqua;
+    }
+
+
+    .contact button:hover {
+      background-color: rgba(0, 255, 255, 0.8);
+    }
+  </style>
+  <body>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    <section class="intro">
+      <div class="intro-content">
+        <div class="outer-circle">
+          <img src="images/IMG_20230830_185059.jpg" alt="Your Name" />
+        </div>
+        <div class="written">
+          <h3>Hello, I'm KARAN PAHWA.</h3>
+          <p>
+            I'm a student at BPIT passionate about Software Engineering and
+            Web Development. I am also inquisitive about DSA and looking forward to engage in with new technologies.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="buttons">
+      <button id="btnEducation">Education</button>
+      <button id="btnSkills">Skills</button>
+      <button id="btnProjects">Projects</button>
+    </section>
+    <section class="education" id="education">
+      <h1>Education</h1>
+      <div class="education-item">
+        <div class="heading-Edu">
+          <h2>Class X</h2>
+        </div>
+        <div class="content-Edu">
+          <p>Jagannath International School</p>
+          <p>Passing year-2018</p>
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="heading-Edu">
+          <h2>Class XII</h2>
+        </div>
+        <div class="content-Edu">
+          <p>Jagannath International School</p>
+          <p>Passing year-2020</p>
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="heading-Edu">
+          <h2>B.Tech</h2>
+        </div>
+        <div class="content-Edu">
+          <p>Bhagwan Parshuram Institute Of Technology</p>
+          <p>ECE</p>
+          <p>Graduation Year-2025</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h1>My Skills</h1>
+      <div class="bars" style="margin-bottom: 80px;">
+        <div class="info">
+          <p>HTML</p>
+          <br />
+          <div class="bar"> 
+            <div class="percentage"></div>
+            <div class="label">90%</div>
+          </div>
+        </div>
+        <br><br><br>
+        <div class="info">
+          <p>CSS</p>
+          <br />
+          <div class="bar">
+            <div class="percentage" style="width: 60%;"></div>
+            <div class="label" style="left: 60%;">60%</div>
+          </div>
+        </div>
+        <br><br><br>
+        <div class="info">
+          <p>Javascript</p>
+          <br />
+          <div class="bar">
+            <div class="percentage" style="width: 70%;"></div>
+            <div class="label" style="left: 70%;">70%</div>
+          </div>
+        </div>
+        <br><br><br>
+        <div class="info">
+          <p>C++</p>
+          <br />
+          <div class="bar">
+            <div class="percentage" style="width: 80%;"></div>
+            <div class="label"style="left: 80%;">80%</div>
+          </div>
+        </div>
+        <br><br><br>
+        <div class="info">
+          <p>Python</p>
+          <br />
+          <div class="bar">
+            <div class="percentage" style="width: 70%;"></div>
+            <div class="label"style="left: 70%;">70%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="projects" id="projects">
+            <h1>Projects</h1>
+            <div class="project-item">
+                <div class="project-desc">
+                    <h4>1. Booksite Landing Page</h4>
+                    <p>A landing page that consists of home , about, recommendation, contact sections and many more.</p>
+                </div>
+                <div class="project-photo">
+                    <img src="images/booksite ss.PNG" alt="photo">
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-desc">
+                    <h4>2. Basic Calculator</h4>
+                    <p>A calculator uing html , css and javascript that does basic calculation.</p>
+                </div>
+                <div class="project-photo">
+                    <img src="images/calci ss.PNG" alt="photo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" style="margin-bottom: 15px;" id="contact">
+      <div class="contact-sec">
+        <div class="links">
+          <h3 style="font-size: 40px; color: aqua;">Contact Me</h3>
+          <p>pahwakaran2002@gmail.com</p>
+          <div class="socials">
+            <a href="https://twitter.com/" target="_blank"><img src="images/twitter.webp" alt="Twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/insta.webp" alt="Instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.webp" alt="Facebook"></a>
+          </div>
+        </div>
+        <div class="connect">
+          <input type="text" name="" id="" placeholder="Your name">
+          <input type="text" placeholder="Your Gmail">
+          <input type="text" placeholder="Your message" style="height: 80px;">
+          <button>Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const educationBtn = document.getElementById("btnEducation");
+        const skillsBtn = document.getElementById("btnSkills");
+        const projectsBtn = document.getElementById("btnProjects");
+        
+        const educationContent = document.getElementById("education");
+        const skillsContent = document.getElementById("skills");
+      const projectsContent = document.getElementById("projects");
+      
+      function showContent(content) {
+          educationContent.style.display = "none";
+          skillsContent.style.display = "none";
+          projectsContent.style.display = "none";
+          
+          content.style.display = "block";
+        }
+        
+      educationBtn.addEventListener("click", function() {
+          showContent(educationContent);
+      });
+  
+      skillsBtn.addEventListener("click", function() {
+          showContent(skillsContent);
+      });
+  
+      projectsBtn.addEventListener("click", function() {
+        showContent(projectsContent);
+      });
+    });
+    
+    </script>
+  </body>
+</html>
